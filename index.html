@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thingspeak Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Thingspeak Dashboard</h1>
+        </header>
+        <div class="content">
+            <div class="card">
+                <h2>Angle</h2>
+                <div class="latest" id="speedValue">Loading...</div>
+                <canvas id="speedChart"></canvas>
+            </div>
+            <div class="card">
+                <h2>Target Position</h2>
+                <div class="latest" id="voltageValue">Loading...</div>
+                <canvas id="voltageChart"></canvas>
+            </div>
+            <div class="card">
+                <h2>Current Position</h2>
+                <div class="latest" id="angleValue">Loading...</div>
+                <canvas id="angleChart"></canvas>
+            </div>
+            <div class="card_1">
+                <h2>Set Desired Angle</h2>
+                <div class="angle-input-container">
+                    <input type="number" id="angleInput" placeholder="Enter angle" maxlength="3" />
+                    <button id="setAngleBtn" onclick="sendAngle()">Set Angle</button>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; 2024 Thingspeak Dashboard | Designed to Inspire Precision</p>
+        </footer>
+    </div>
+    <script src="1.js"></script>
+</body>
+</html>
